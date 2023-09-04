@@ -12,7 +12,7 @@ def driver(request):
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
-    service = Service(executable_path="firefox.geckodriver")
+    service = Service(executable_path="/snap/bin/firefox.geckodriver")
     driver = webdriver.Firefox(options=options, service=service)
     driver.set_window_size(1920, 1080)
     driver.maximize_window()
